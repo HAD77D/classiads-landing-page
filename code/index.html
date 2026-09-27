@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClassiAds - Glal Subsse of Professional Classified Ads</title>
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS عبر CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#1264E8',
+              blueHover: '#0B52C7',
+              borderBlue: '#1E6BFF',
+              dark: '#0B132A',
+              slate: '#334155',
+              grayPill: '#EEF2F6'
+            }
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen flex flex-col justify-between selection:bg-brand-blue selection:text-white">
+
+  <!-- 1. الشادو والتوهج اللوني الأزرق في أقصى يسار الشاشة (مطابق تماماً للتصميم) -->
+  <div class="absolute top-0 left-0 w-[520px] h-[720px] pointer-events-none z-0" 
+       style="background: radial-gradient(ellipse 400px 540px at -6% 32%, rgba(56, 189, 248, 0.45) 0%, rgba(96, 165, 250, 0.22) 36%, rgba(191, 219, 254, 0.1) 58%, transparent 74%);">
+  </div>
+
+  <!-- 2. شريط التنقل العلوي (Navbar) -->
+  <header class="relative z-30 w-full pt-8 px-8 sm:px-12 lg:px-16 xl:px-20">
+    <div class="w-full flex items-center justify-between">
+      
+      <!-- شعار ClassiAds -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-8 h-8 flex items-center justify-center">
+          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+            <circle cx="10" cy="10" r="4.5" fill="#00D2FF"/>
+            <circle cx="26" cy="10" r="4.5" fill="#1264E8"/>
+            <circle cx="10" cy="26" r="4.5" fill="#1264E8"/>
+            <circle cx="26" cy="26" r="4.5" fill="#00D2FF"/>
+            <path d="M14 18H22M18 14V22" stroke="#1264E8" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="text-2xl font-black tracking-tight text-brand-dark">
+          Classi<span class="text-brand-blue">Ads</span>
+        </span>
+      </a>
+
+      <!-- القوائم وزر تسجيل الدخول -->
+      <div class="flex items-center gap-7 lg:gap-10">
+        <nav class="hidden md:flex items-center gap-7 text-[13px] font-bold tracking-wider text-brand-slate uppercase">
+          <a href="#" class="text-brand-blue hover:text-brand-blueHover transition-colors font-extrabold">HOME</a>
+          <a href="#" class="hover:text-brand-blue transition-colors">FEATURED</a>
+          <a href="#" class="hover:text-brand-blue transition-colors">TRENDING</a>
+          
+          <!-- كبسولة DASHBOARD الرمادية -->
+          <div class="bg-brand-grayPill px-4 py-2 rounded-full flex items-center gap-2 text-brand-slate text-[12px] font-bold cursor-pointer hover:bg-slate-200 transition-colors">
+            <span>DASHBOARD</span>
+            <i class="fa-solid fa-chevron-down text-[10px]"></i>
+          </div>
+        </nav>
+
+        <!-- زر Login -->
+        <a href="#" class="bg-brand-blue hover:bg-brand-blueHover text-white px-8 py-2.5 rounded-full text-[13px] font-bold tracking-wide shadow-md shadow-blue-500/20 transition-all">
+          Login
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 3. الجزء الرئيسي (Hero Section) -->
+  <main class="relative z-20 flex-1 w-full flex items-center px-8 sm:px-12 lg:px-16 xl:px-20 py-8 lg:py-0">
+    <div class="w-full min-h-[calc(100vh-140px)] flex items-center">
+      
+      <!-- الجانب الأيسر: النصوص والبحث -->
+      <div class="w-full lg:w-[45%] xl:w-[43%] space-y-7 z-20 pt-2">
+        
+        <!-- العنوان الرئيسي المكون من 3 أسطر بالخط العريض الأسود -->
+        <h1 class="text-4xl sm:text-5xl lg:text-[56px] xl:text-[62px] font-black text-brand-dark leading-[1.12] tracking-tight">
+          Glal Subsse of <br>
+          Professional <br>
+          Classified Ads
+        </h1>
+
+        <!-- حقل البحث والزر -->
+        <div class="space-y-4 max-w-[420px]">
+          
+          <!-- حقل البحث بالإطار الأزرق الدائري -->
+          <div class="relative w-full">
+            <input 
+              type="text" 
+              value="بحث" 
+              readonly
+              class="w-full h-[52px] bg-white border-2 border-brand-borderBlue rounded-full px-7 text-[13px] text-slate-500 font-medium tracking-wide focus:outline-none shadow-[0_2px_8px_rgba(30,107,255,0.06)] cursor-pointer"
+            >
+          </div>
+
+          <!-- زر Search your -->
+          <button class="bg-brand-blue hover:bg-brand-blueHover text-white px-9 h-[48px] rounded-full text-[13px] font-bold shadow-md shadow-blue-500/25 transition-all flex items-center justify-center">
+            Search your
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 4. صورة الشخصية والرذاذ المائي: مرفوعة للأعلى وممتدة لتقترب من حقل البحث -->
+  <div class="hidden lg:flex absolute right-0 top-12 bottom-0 w-[64vw] min-w-[850px] max-w-[1150px] h-[calc(100vh-50px)] max-h-[960px] items-start justify-end pointer-events-none select-none z-10 overflow-visible">
+    <img 
+      src="hero.png" 
+      alt="ClassiAds Hero Graphic" 
+      class="w-full h-full object-contain object-right-top transform translate-x-2 -translate-y-2 scale-[1.04]"
+    >
+  </div>
+
+  <!-- صورة مخصصة لشاشات الموبايل والتابلت -->
+  <div class="block lg:hidden w-full px-6 pb-10 z-10">
+    <img 
+      src="hero.png" 
+      alt="ClassiAds Hero Graphic" 
+      class="w-full h-auto object-contain mx-auto"
+    >
+  </div>
+
+  <footer class="py-2"></footer>
+
+</body>
+</html>
